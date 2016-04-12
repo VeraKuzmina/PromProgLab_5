@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		</p>
+<p>FindBugs version: 3.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\main\com\example\circle\Circle.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\main\com\example\circle\ClockDial.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\main\com\example\circle\Main$1.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\main\com\example\circle\Main.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\main\com\example\circle\MyJPanel$1.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\main\com\example\circle\MyJPanel.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\main\com\example\circle\Needle.class</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>168 lines of code analyzed,
+	in 7 classes, 
+	in 1 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right"/>
+<td align="right">0.00</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">9</td>
+<td align="right">53.57</td>
+</tr>
+<tr class="tablerow1">
+<td>Low Priority Warnings</td>
+<td align="right">5</td>
+<td align="right">29.76</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>14</b>
+</td>
+<td align="right">
+<b>83.33</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">4</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</td>
+<td align="right">7</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">3</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>14</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65988');">
+<td>
+<span class="priority-3">Se</span>
+</td>
+<td>Class com.example.circle.MyJPanel defines non-transient non-serializable instance field dial</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65988" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.MyJPanel<br/>Field com.example.circle.MyJPanel.dial<br/>Actual type com.example.circle.ClockDial<br/>In MyJPanel.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66048');">
+<td>
+<span class="priority-3">Se</span>
+</td>
+<td>Class com.example.circle.MyJPanel defines non-transient non-serializable instance field hNeedle</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66048" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.MyJPanel<br/>Field com.example.circle.MyJPanel.hNeedle<br/>Actual type com.example.circle.Needle<br/>In MyJPanel.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66108');">
+<td>
+<span class="priority-3">Se</span>
+</td>
+<td>Class com.example.circle.MyJPanel defines non-transient non-serializable instance field mNeedle</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66108" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.MyJPanel<br/>Field com.example.circle.MyJPanel.mNeedle<br/>Actual type com.example.circle.Needle<br/>In MyJPanel.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66168');">
+<td>
+<span class="priority-3">Se</span>
+</td>
+<td>Class com.example.circle.MyJPanel defines non-transient non-serializable instance field sNeedle</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66168" style="display: none;">
+<a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.MyJPanel<br/>Field com.example.circle.MyJPanel.sNeedle<br/>Actual type com.example.circle.Needle<br/>In MyJPanel.java</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_PERFORMANCE">Performance Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65723');">
+<td>
+<span class="priority-2">SS</span>
+</td>
+<td>Unread field: com.example.circle.Main.H; should this field be static?</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65723" style="display: none;">
+<a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+<br/>In class com.example.circle.Main<br/>Field com.example.circle.Main.H<br/>At Main.java:[line 20]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65774');">
+<td>
+<span class="priority-2">SS</span>
+</td>
+<td>Unread field: com.example.circle.Main.W; should this field be static?</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65774" style="display: none;">
+<a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+<br/>In class com.example.circle.Main<br/>Field com.example.circle.Main.W<br/>At Main.java:[line 21]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65570');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: com.example.circle.ClockDial.dialColor</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65570" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.ClockDial<br/>Field com.example.circle.ClockDial.dialColor<br/>At ClockDial.java:[line 33]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65621');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: com.example.circle.ClockDial.diam</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65621" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.ClockDial<br/>Field com.example.circle.ClockDial.diam<br/>At ClockDial.java:[line 32]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65672');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: com.example.circle.ClockDial.hairLineColor</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65672" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.ClockDial<br/>Field com.example.circle.ClockDial.hairLineColor<br/>At ClockDial.java:[line 34]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66228');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: com.example.circle.Needle.length</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66228" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.Needle<br/>Field com.example.circle.Needle.length<br/>At Needle.java:[line 35]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66279');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: com.example.circle.Needle.width</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66279" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class com.example.circle.Needle<br/>Field com.example.circle.Needle.width<br/>At Needle.java:[line 36]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65825');">
+<td>
+<span class="priority-2">ICAST</span>
+</td>
+<td>Integral division result cast to double or float in com.example.circle.MyJPanel.paintComponent(Graphics)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65825" style="display: none;">
+<a href="#ICAST_IDIV_CAST_TO_DOUBLE">Bug type ICAST_IDIV_CAST_TO_DOUBLE (click for details)</a>
+<br/>In class com.example.circle.MyJPanel<br/>In method com.example.circle.MyJPanel.paintComponent(Graphics)<br/>At MyJPanel.java:[line 55]<br/>Another occurrence at MyJPanel.java:[line 56]<br/>Another occurrence at MyJPanel.java:[line 57]<br/>Another occurrence at MyJPanel.java:[line 84]<br/>Another occurrence at MyJPanel.java:[line 97]<br/>Another occurrence at MyJPanel.java:[line 110]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65934');">
+<td>
+<span class="priority-3">REC</span>
+</td>
+<td>Exception is caught when Exception is not thrown in com.example.circle.MyJPanel.paintComponent(Graphics)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65934" style="display: none;">
+<a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+<br/>In class com.example.circle.MyJPanel<br/>In method com.example.circle.MyJPanel.paintComponent(Graphics)<br/>At MyJPanel.java:[line 122]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66330');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: com.example.circle.Needle.error</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66330" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class com.example.circle.Needle<br/>Field com.example.circle.Needle.error<br/>At Needle.java:[line 32]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="ICAST_IDIV_CAST_TO_DOUBLE">ICAST_IDIV_CAST_TO_DOUBLE: Integral division result cast to double or float</a>
+</h2>
+
+<p>
+This code casts the result of an integral division (e.g., int or long division)
+operation to double or
+float.
+Doing division on integers truncates the result
+to the integer value closest to zero.  The fact that the result
+was cast to double suggests that this precision should have been retained.
+What was probably meant was to cast one or both of the operands to
+double <em>before</em> performing the division.  Here is an example:
+</p>
+<blockquote>
+<pre>
+int x = 2;
+int y = 5;
+// Wrong: yields result 0.0
+double value1 =  x / y;
+
+// Right: yields result 0.4
+double value2 =  x / (double) y;
+</pre>
+</blockquote>
+
+    
+<h2>
+<a name="REC_CATCH_EXCEPTION">REC_CATCH_EXCEPTION: Exception is caught when Exception is not thrown</a>
+</h2>
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+  <pre>
+  try {
+    ...
+  } catch (RuntimeException e) {
+    throw e;
+  } catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+  }</pre>
+  
+     
+<h2>
+<a name="SE_BAD_FIELD">SE_BAD_FIELD: Non-transient non-serializable instance field in serializable class</a>
+</h2>
+
+<p> This Serializable class defines a non-primitive instance field which is neither transient,
+Serializable, or <code>java.lang.Object</code>, and does not appear to implement
+the <code>Externalizable</code> interface or the
+<code>readObject()</code> and <code>writeObject()</code> methods.&nbsp;
+Objects of this class will not be deserialized correctly if a non-Serializable
+object is stored in this field.</p>
+
+    
+<h2>
+<a name="SS_SHOULD_BE_STATIC">SS_SHOULD_BE_STATIC: Unread field: should this field be static?</a>
+</h2>
+
+  <p> This class contains an instance final field that
+   is initialized to a compile-time static value.
+   Consider making the field static.</p>
+
+    
+<h2>
+<a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
+</h2>
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    
+<h2>
+<a name="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD: Unread public/protected field</a>
+</h2>
+
+  <p> This field is never read.&nbsp;
+The field is public or protected, so perhaps
+    it is intended to be used with classes not seen as part of the analysis. If not,
+consider removing it from the class.</p>
+
+    </body>
+</html>

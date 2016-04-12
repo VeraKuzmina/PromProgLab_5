@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		</p>
+<p>FindBugs version: 3.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\test\com\example\circle\CircleTest.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\test\com\example\circle\ClockDialTest.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\test\com\example\circle\IntegrationTest.class</li>
+<li>C:\Users\Вера\IdeaProjects\Промышленное_программирование\PromProgLab5\build\classes\test\com\example\circle\NeedleTest.class</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>34 lines of code analyzed,
+	in 4 classes, 
+	in 1 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right">2</td>
+<td align="right">58.82</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">1</td>
+<td align="right">29.41</td>
+</tr>
+<tr class="tablerow1">
+<td>Low Priority Warnings</td>
+<td align="right">1</td>
+<td align="right">29.41</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>4</b>
+</td>
+<td align="right">
+<b>117.65</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">2</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</td>
+<td align="right">1</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">1</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>4</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65568');">
+<td>
+<span class="priority-1">CNT</span>
+</td>
+<td>Rough value of Math.PI found: 3.1415</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65568" style="display: none;">
+<a href="#CNT_ROUGH_CONSTANT_VALUE">Bug type CNT_ROUGH_CONSTANT_VALUE (click for details)</a>
+<br/>In class com.example.circle.CircleTest<br/>In method com.example.circle.CircleTest.testArea()<br/>Value 3.1415<br/>Value Math.PI<br/>At CircleTest.java:[line 13]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65699');">
+<td>
+<span class="priority-2">Nm</span>
+</td>
+<td>The method name com.example.circle.ClockDialTest.BufferedImageTest() doesn't start with a lower case letter</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65699" style="display: none;">
+<a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+<br/>In class com.example.circle.ClockDialTest<br/>In method com.example.circle.ClockDialTest.BufferedImageTest()<br/>At ClockDialTest.java:[lines 18-20]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_PERFORMANCE">Performance Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65752');">
+<td>
+<span class="priority-3">Dm</span>
+</td>
+<td>com.example.circle.NeedleTest.correctVar() invokes toString() method on a String</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65752" style="display: none;">
+<a href="#DM_STRING_TOSTRING">Bug type DM_STRING_TOSTRING (click for details)</a>
+<br/>In class com.example.circle.NeedleTest<br/>In method com.example.circle.NeedleTest.correctVar()<br/>At NeedleTest.java:[line 17]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65629');">
+<td>
+<span class="priority-1">DLS</span>
+</td>
+<td>Dead store to clockDial in com.example.circle.ClockDialTest.setWrongZone()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65629" style="display: none;">
+<a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+<br/>In class com.example.circle.ClockDialTest<br/>In method com.example.circle.ClockDialTest.setWrongZone()<br/>Local variable named clockDial<br/>At ClockDialTest.java:[line 24]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="CNT_ROUGH_CONSTANT_VALUE">CNT_ROUGH_CONSTANT_VALUE: Rough value of known constant found</a>
+</h2>
+      
+    <p>It's recommended to use the predefined library constant for code clarity and better precision.</p>
+
+    
+<h2>
+<a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
+</h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because FindBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    
+<h2>
+<a name="DM_STRING_TOSTRING">DM_STRING_TOSTRING: Method invokes toString() method on a String</a>
+</h2>
+
+  <p> Calling <code>String.toString()</code> is just a redundant operation.
+  Just use the String.</p>
+
+    
+<h2>
+<a name="NM_METHOD_NAMING_CONVENTION">NM_METHOD_NAMING_CONVENTION: Method names should start with a lower case letter</a>
+</h2>
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    </body>
+</html>
